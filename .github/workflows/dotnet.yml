@@ -63,7 +63,7 @@ jobs:
       # Só notifica se o deploy tiver sido bem-sucedido
       - name: Notify Sleuth
         if: ${{ success() && steps.deploy.outcome == 'success' }}
-        uses: sleuth-io/sleuth-action@v1
+        uses: sleuth-io/sleuth-action@main
         with:
           api_key: ${{ secrets.SLEUTH_API_KEY }}   # crie esse secret no repo/org
           environment: production                  # precisa bater com o ambiente definido no Sleuth
